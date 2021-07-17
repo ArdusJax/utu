@@ -1,12 +1,13 @@
+mod attestation;
 mod commands;
 mod datastore;
-use pretty_env_logger;
 use log::debug;
+use pretty_env_logger;
 
 use crate::commands::{Command, UtuOptions, WatchOpts};
+use anyhow::Result;
 use gumdrop::Options;
 use tokio;
-use anyhow::Result;
 
 #[tokio::main]
 async fn main() -> Result<()> {

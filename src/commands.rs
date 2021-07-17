@@ -28,6 +28,8 @@ pub enum Command {
 pub struct WatchOpts {
     #[options(help = "print help message")]
     pub help: bool,
+    #[options(help = "kind of attestation")]
+    pub kind: String,
     #[options(free)]
     pub free: Vec<String>,
     #[options(help = "number of jobs", meta = "N")]

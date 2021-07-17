@@ -2,9 +2,7 @@ use anyhow::Result;
 use mongodb::{bson::doc, options::ClientOptions, Client};
 
 pub async fn new() -> Result<Client> {
- let mut client_options =
-        ClientOptions::parse("mongodb://localhost:27017")
-            .await?;
+    let mut client_options = ClientOptions::parse("mongodb://localhost:27017").await?;
     // Manually set an option
     client_options.app_name = Some("phoenix-fire".to_string());
     // Get a handle to the cluster
